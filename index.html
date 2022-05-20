@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>MovieBusters Podcast Episodes 1 & 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="media/Logo.jpg" class="logo">
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>MovieBusters<br>Eps.<br>1 & 2</h1>
+            </div>
+            <div class="right-col">
+                <p>Click here to listen to our first episode</p>
+                <img src="media/Play.png" id="icon">
+            </div>
+            <div class="right-col2">
+                <p>Click here to listen to our second episode</p>
+                <img src="media/Play.png" id="icon2">
+            </div>
+        </div>
+    </div>
+
+    <audio id="Ep.1">
+        <source src="media/MovieBusters Ep. 1.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="Ep.2">
+        <source src="media/MovieBusters Ep. 2.mp3" type="audio/mp3">
+    </audio>
+
+<script>
+    var Ep1 = document.getElementById("Ep.1");
+    var Ep2 = document.getElementById("Ep.2");
+    var icon = document.getElementById("icon");
+    var icon2 = document.getElementById("icon2");
+
+    icon.onclick = function(){
+        if(Ep1.paused){
+            Ep1.play();
+            icon.src = "media/Pause.png";
+        }else{
+            Ep1.pause();
+            icon.src = "media/Play.png";
+        }
+    }
+
+    icon2.onclick = function(){
+        if(Ep2.paused){
+            Ep2.play();
+            icon2.src = "media/Pause.png";
+        }else{
+            Ep2.pause();
+            icon2.src = "media/Play.png";
+        }
+    }
+</script>
+
+</body>
+</html>
